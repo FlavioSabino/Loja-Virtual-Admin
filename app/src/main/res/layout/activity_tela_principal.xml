@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/AzulCinza_50"
+    tools:context=".activities.TelaPrincipal">
+
+    <LinearLayout
+        android:id="@+id/containerMenu"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center">
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btProdutos"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Produtos"
+                android:textSize="18sp"
+                android:textColor="@color/white"
+                android:textStyle="bold"
+                android:background="@drawable/bg_button_enabled"
+                android:padding="15dp"
+                android:layout_margin="20dp"/>
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btPedidos"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Pedidos"
+                android:textSize="18sp"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                android:background="@drawable/bg_button_disabled"
+                android:padding="15dp"
+                android:layout_margin="20dp"/>
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/txtSair"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Sair"
+                android:textSize="18sp"
+                android:textColor="@color/teal_900"
+                android:textStyle="bold"
+                android:layout_margin="20dp"/>
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <androidx.fragment.app.FragmentContainerView
+        android:id="@+id/containerFragmentProdutos"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:visibility="visible"
+        app:layout_constraintTop_toBottomOf="@id/containerMenu"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+
+    <androidx.fragment.app.FragmentContainerView
+        android:id="@+id/containerFragmentPedidos"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:visibility="invisible"
+        app:layout_constraintTop_toBottomOf="@id/containerMenu"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/btCadastroProdutos"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        android:backgroundTint="@color/teal_900"
+        android:src="@drawable/ic_add"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

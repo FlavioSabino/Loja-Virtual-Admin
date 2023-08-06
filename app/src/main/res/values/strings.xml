@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Loja Virtual Admin</string>
+    <string name="titulo_loja_virtual_admin"><b><font color="#FF018786">Loja Virtual</font></b> Admin</string>
+    <string name="texto_botao_entrar">Entrar</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+</resources>
